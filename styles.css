@@ -41,7 +41,7 @@ nav {
 .navbar-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
     max-width: 1200px;
     margin: 0 auto;
 }
