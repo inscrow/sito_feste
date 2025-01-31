@@ -1,3 +1,11 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --red: #ff2e1d;
+    --yellow: #ffb737;
+    --blue: #36a7d2;
+}
+
 /* General Reset */
 * {
     margin: 0;
@@ -17,20 +25,20 @@ body {
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--white);
+    color: var(--black);
     line-height: 1.6;
 }
 
 main {
     flex: 1;
-    padding: 20px;
-    background-color: #f9f9f9;
+    padding: 10%;
+    background-color: var(--white);
 }
 
 /* Navbar Styles */
 nav {
-    background-color: #FF8C00; /* Bright orange to match the header */
+    background-color: var(--white);
     padding: 15px 20px;
     position: sticky;
     top: 0;
@@ -49,7 +57,7 @@ nav {
 .navbar-logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #fff;
+    color: var(--black);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -66,15 +74,17 @@ nav {
 
 .navbar-menu a {
     text-decoration: none;
-    color: white;
+    color: var(--black);
     font-size: 1.1rem;
     text-transform: capitalize;
     transition: color 0.3s ease;
 }
 
 .navbar-menu a:hover {
-    color: #FFD700; /* Golden hover effect */
-    text-decoration: underline;
+    color: var(--red);
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 
 /* Hamburger Menu for Mobile */
@@ -82,7 +92,7 @@ nav {
     display: none;
     cursor: pointer;
     font-size: 1.8rem;
-    color: white;
+    color: var(--black);
 }
 
 @media (max-width: 768px) {
@@ -111,28 +121,32 @@ nav {
     display: flex;
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #4CAF50;
     text-align: center;
     margin-bottom: 10px;
 }
 
 /* Header Style */
 header {
-    background-color: #FF8C00; /* Bright orange for a fun vibe */
+    background-color: var(--white); /* Bright orange for a fun vibe */
     padding: 20px;
     text-align: center;
-    color: white;
 }
 
 header h1 {
     font-size: 2.5rem;
     margin: 0;
+    color: var(--red);
 }
 
 header p {
     font-size: 1.2rem;
+}
+
+h2 {
+    background-color: var(--yellow);
+    color: var(--white);
 }
 
 /* Hero Section */
@@ -144,12 +158,12 @@ header p {
 
 .hero h2 {
     font-size: 2rem;
-    color: #fff;
+    color: var(--white);
 }
 
 .hero p {
     font-size: 1.1rem;
-    color: #fff;
+    color: var(--white);
     margin-top: 10px;
 }
 
@@ -162,7 +176,7 @@ header p {
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -207,10 +221,14 @@ button:hover {
     background-color: #ff4500; /* Slightly darker for hover effect */
 }
 
+.padded {
+    padding: 30px;
+}
+
 /* Footer */
 footer {
-    background-color: #2F4F4F; /* Dark slate gray */
-    color: white;
+    background-color: var(--blue); /* Dark slate gray */
+    color: var(--black);
     text-align: center;
     padding: 20px;
 }
