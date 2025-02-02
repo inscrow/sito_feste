@@ -145,7 +145,6 @@ header p {
 }
 
 h2 {
-    background-color: var(--yellow);
     color: var(--white);
 }
 
@@ -172,15 +171,15 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 20px 0;
+    /* margin: 20px 0; */
 }
 
 .card {
-    background-color: var(--white);
+    /* background-color: var(--white); */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 280px;
+    width: 500px;
     margin: 10px;
     text-align: center;
 }
@@ -194,13 +193,29 @@ h2 {
 
 .card h3 {
     font-size: 1.5rem;
-    color: #FF6347;
+    color: var(--white);
     margin-bottom: 10px;
 }
 
 .card p {
     font-size: 1rem;
-    color: #555;
+    color: var(--black);
+}
+
+.card-orari {
+    background-color: var(--yellow);
+}
+
+.card-info {
+    background-color: var(--blue);
+}
+
+.card-costi {
+    background-color: var(--red);
+}
+
+.card-contatti {
+    background-color: var(--yellow);
 }
 
 /* Call to Action Button */
@@ -245,7 +260,8 @@ footer p {
     }
 
     .card {
-        width: 80%;
+        width: 100%;
+        padding: 0px;
     }
 
     .hero h2 {
