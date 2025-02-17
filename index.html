@@ -3,130 +3,128 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Feste McDonald's</title>
-        <!-- Link to external CSS file if needed -->
         <link rel="stylesheet" href="styles.css">
+        <title>Festeggia con noi!</title>
     </head>
     <body>
-        <nav>
-            <div class="navbar-container">
-                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-                <ul class="navbar-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#orari">Orari</a></li>
-                    <li><a href="#info">Info</a></li>
-                    <li><a href="#costi">Costi</a></li>
-                    <li><a href="#contatti">Contatti</a></li>
+        <div class="navbar">
+            <div class="hamburger" onclick="toggleNav()">&#9776;</div>
+            <nav>
+                <div><a href="#costi">Costi</a></div>
+                <div><a href="#genitori">Genitori</a></div>
+                <div><a href="#temi">Temi</a></div>
+                <div><a href="#orari">Orari</a></div> 
+                <div><a href="#info">Informazioni</a></div>
+                <div><a href="#contatti">Contatti</a></div>
+            </nav>
+        </div>
+        <header>Festeggia con noi il tuo compleanno!</header>
+
+
+        <section id="costi">
+            <h1>Costi</h1>
+            <p>I costi di seguito comprendono animazione, un happy meal a bambino e la torta</p>
+            <div class="costi">
+                <ul class="costi">
+                    <li>Festa base (1 ora e mezza)</li>
+                    <li>Torta base: €9,50 a bambino</li>
+                    <li>Torta premium: €11,50 a bambino</li>
+                </ul>
+                <ul class="costi">
+                    <li>Festa happy (2 ore)</li>
+                    <li>Torta base: €11,50 a bambino</li>
+                    <li>Torta premium: €13,50 a bambino</li>
                 </ul>
             </div>
-        </nav>
-        <header>
-            <h1>Festeggia con noi il tuo compleanno!</h1>
-        </header>
-        <img class="temi" src="sfondo/ufficiale.png" />
-        <main>
-            <section id="home">
-                <p align="center">
-                    Porta i tuoi bambini a festeggiare da noi: penseremo a
-                    tutto noi, dal divertimento, al mangiare e anche la torta
-                </p>
-                <br>
-            </section>
+        </section>
 
-            <div class="card-container">
-                <section id="orari" class="card card-orari">
-                    <h2>Orari</h2>
-                    <p>
-                        I possibili orari sono:
-                    </p>
-                    <ul class="padded">
-                        <li>Festa base (1 ora e mezza tutti i giorni):</li>
-                        <ul class="padded">
-                            <li>Dalle 15 alle 16:30</li>
-                            <li>Dalle 17 alle 18:30</li>
-                        </ul>
-                        <li>Festa happy (2 ore solo da lunedì a giovedì):</li>
-                        <ul class="padded">
-                            <li>Dalle 16:30 alle 18:30</li>
-                        </ul>
-                    </ul>
-                </section>
-
-                <section id="info" class="card card-info">
-                    <h2>Info</h2>
-                    <p>
-                        Ecco alcune informazioni utili se vuoi festeggiare con noi
-                        il tuo compleanno:
-                    </p>
-                    <ul class="padded">
-                        <li>
-                            pensiamo a tutto noi, non c'è bisogno di animatori
-                            esterni, di cibo o della torta, abbiamo già tutto
-                            quello che serve
-                        </li>
-                        <li><b>
-                            per prenotare la festa è necessario presentarsi al
-                            locale (Via Giordano Bruno 216 Alessandria) perché è
-                            richiesta la firma di un genitore
-                        </b></li>
-                        <li>
-                            è richiesta la presenza di almeno un genitore ogni 3
-                            bambini (noi pensiamo all'animazione, ma se i bambini
-                            sono tanti non possiamo seguirli tutti singolarmente)
-                        </li>
-                        <li>
-                            è richiesta la presenza di almeno 12 bambini
-                        </li>
-                        <li>
-                            non è possibile portare cibo dall'esterno. Se ci sono
-                            bambini con allergie vanno segnalati in anticipo così
-                            da poter preparare per loro dei pasti adeguati alle
-                            loro necessità
-                        </li>
-                        <li>
-                            le torte sono al gusto stracciatella oppure fragola, ed 
-                            entrambe sono disponibili nella versione base o premium
-                            (un po' più grande)
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="costi" class="card card-costi">
-                    <h2>Costi</h2>
-                    <p>Il costo dipende dal tipo di festa e di torta:</p>
-                    <ul class="padded">
-                        <li>Festa normale (1,5h):</li>
-                        <ul class="padded">
-                            <li>Torta base: €9,50 a bambino</li>
-                            <li>Torta premium: €11,50 a bambino</li>
-                        </ul>
-                        <li>Festa happy (2h):</li>
-                        <ul class="padded">
-                            <li>Torta base: €11,50 a bambino</li>
-                            <li>Torta premium: €13,50 a bambino</li>
-                        </ul>
-                    </ul>
-                </section>
-
-                <section id="contatti" class="card card-contatti">
-                    <h2>Contatti</h2>
-                    <p>
-                        Telefono: 0131754073
-                    </p>
-                    <p>
-                        Dove siamo: Via Giordano Bruno 216, Alessandria
-                    </p>
-                </section>
+        <section id="genitori">
+            <h1>Genitori</h1>
+            <p>La consumazione dei genitori non è compresa nei costi, però abbiamo dei menù speciali solo per le feste</p>
+            <div class="menu">
+                <ul class="salato">
+                    <li>Menù salati</li>
+                    <li><p>Per 3 genitori:</p><p>(Tasty Basket + 3 bibite + 3 patate piccole)</p><p>€14,90</p></li>
+                    <li><p>Per 5 genitori:</p><p>(Tasty Basket + 5 bibite + 5 patate piccole)</p><p>€???</p></li>
+                </ul>
+                <ul class="dolce">
+                    <li>Menù dolci</li>
+                    <li><p>Per 3 genitori:</p><p>(3 bevande calde + 3 dolci tra torte, ciambelle e muffin)</p><p>€???</p></li>
+                    <li><p>Per 5 genitori:</p><p>(5 bevande calde + 5 dolci tra torte, ciambelle e muffin)</p><p>€???</p></li>
+                </ul>
             </div>
-        </main>
+        </section>
+
+        <section id="temi">
+            <h1>Temi</h1>
+            <p>Per la festa si può scegliere uno di 4 temi:</p>
+            <ul class="temi">
+                <li>Un mondo di colori</li>
+                <li>Questa sì che è magia</li>
+                <li>A caccia della traccia</li>
+                <li>Una festa da favola(???)</li>
+            </ul>
+            <div class="tema">
+                <h2>Un mondo di colori</h2>
+                <p>Giochi a tema colore oppure trucca bimbi</p>
+            </div>
+            <div class="tema">
+                <h2>Questa sì che è magia</h2>
+                <p>Giochi a tema magia e qualche trucchetto</p>
+            </div>
+            <div class="tema">
+                <h2>A caccia della traccia</h2>
+                <p>Caccia al tesoro</p>
+            </div>
+            <div class="tema">
+                <h2>Una festa da favola</h2>
+                <p>Giochi classici da festa come gioco della sedia o 1,2,3 stella</p>
+            </div>
+        </section>
+
+        <section id="orari">
+            <h1>Orari</h1>
+            <div class="orari">
+                <ul class="base">
+                    <li>Festa base (1 ora e mezza)</li>
+                    <li>Dalle 15 alle 16,30</li>
+                    <li>Dalle 17 alle 18,30</li>
+                </ul>
+                <ul class="happy">
+                    <li>Festa happy (2 ore)(solo da lunedì a giovedì)</li>
+                    <li>Dalle 16,30 alle 18,30</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="info">
+            <h1>Informazioni</h1>
+            <p>Ecco alcune informazioni aggiuntive:</p>
+            <ul class="info">
+                <li>per effettuare la prenotazione è necessario recarsi al locale</li>
+                <li>è meglio prenotare la festa con almeno due settimane di anticipo</li>
+                <li>il numero minimo di bambini è 5</li>
+                <li>avvisare almeno due giorni prima per allergie</li>
+                <li>è richiesta la presenza di almeno un genitore ogni 3 bambini</li>
+            </ul>
+        </section>
+
+        <section id="contatti">
+            <h1>Contatti</h1>
+            <div class="telefono">
+                <p><a href="tel:+390131754073">0131 754073</a></p>
+            </div>
+            <div class="indirizzo">
+                <p><a id="address-link" href="#">Via Giordano Bruno 216, Alessandria</a></p>
+            </div>
+        </section>
 
         <footer>
-            <p>&copy; 2025 My Website</p>
+            <p>Questo sito utilizza solo i cookies necessari del browser, e non utilizza cookies aggiuntivi</p>
+            <!-- TODO: aggiungere informazioni legali -->
+            <p>Sede legale: Kairos s.r.l.</p>
         </footer>
 
-        <!-- Link to external JavaScript file if needed -->
-        <script src="script.js"></script>
+        <script src="script.js"> </script>
     </body>
 </html>
-

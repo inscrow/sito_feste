@@ -1,279 +1,156 @@
 :root {
-    --black: #000000;
     --white: #ffffff;
+    --black: #000000;
     --red: #ff2e1d;
     --yellow: #ffb737;
     --blue: #36a7d2;
 }
 
-/* General Reset */
-* {
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Ensure the body and html take full height */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-/* create a flex container */
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: 'Arial', sans-serif;
+header {
     background-color: var(--white);
-    color: var(--black);
-    line-height: 1.6;
+    color: var(--red);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2em;
+    font-weight: bolder;
 }
 
-main {
-    flex: 1;
-    padding: 10%;
-    padding-top: 0px;
-    background-color: var(--white);
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
-/* Navbar Styles */
-nav {
+.navbar {
     background-color: var(--white);
-    padding: 15px 20px;
+    padding: 10px;
     position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1000;
 }
 
-.navbar-container {
+nav {
     display: flex;
-    justify-content: space-between;
-    align-items: top;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: space-around;
+    background-color: var(--white);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--black);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+nav div {
+    flex: 1;
+    text-align: center;
 }
 
-.navbar-menu {
-    display: flex;
-    list-style-type: none;
-}
-
-.navbar-menu li {
-    margin: 0 20px;
-}
-
-.navbar-menu a {
-    text-decoration: none;
-    color: var(--black);
-    font-size: 1.1rem;
-    text-transform: capitalize;
-    transition: color 0.3s ease;
-}
-
-.navbar-menu a:hover {
+nav a {
     color: var(--red);
-    text-transform: capitalize;
-    font-size: 1.2rem;
     text-decoration: none;
+    display: block;
+    padding: 10px;
 }
 
-/* Hamburger Menu for Mobile */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: var(--black);
+section {
+    background-color: var(--yellow);
+    padding: 20%;
+}
+
+section h1 {
+    color: var(--white);
+    font-size: 1.5em;
+}
+
+div.costi,
+div.menu,
+div.orari {
+    display: flex;
+}
+
+ul.costi li:first-child,
+ul.salato li:first-child,
+ul.dolce li:first-child,
+ul.base li:first-child,
+ul.happy li:first-child {
+    font-weight: bold;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+footer {
+    background-color: var(--blue);
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+#contatti a {
+    text-decoration: none;
+    color: var(--blue);
 }
 
 @media (max-width: 768px) {
-    .navbar-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
+    .hamburger {
+        display: block;
+        margin: 0 20px;
+        cursor: pointer;
+        z-index: 1001;
     }
 
-    .navbar-menu.active {
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav.active {
         display: flex;
     }
 
-    .navbar-menu li {
-        margin: 10px 0;
+    h1 {
+        font-size: 1.5em;
     }
 
-    .hamburger {
+    h2 {
+        font-size: 1.2em;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .costi li, .salato li, .dolce li, .temi li, .info li {
+        font-size: 1em;
+    }
+
+    div.orari {
         display: block;
     }
 }
 
-/* Mobile Menu Toggle */
-.navbar-menu.active {
-    display: flex;
-}
-
-h1, h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-/* Header Style */
-header {
-    background-color: var(--white); /* Bright orange for a fun vibe */
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    color: var(--red);
-}
-
-header p {
-    font-size: 1.2rem;
-}
-
-img.temi {
-    max-width: 700px;
-}
-
-h2 {
-    color: var(--white);
-}
-
-/* Hero Section */
-.hero {
-    background-color: #FFD700;
-    padding: 30px 0;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2rem;
-    color: var(--white);
-}
-
-.hero p {
-    font-size: 1.1rem;
-    color: var(--white);
-    margin-top: 10px;
-}
-
-/* Cards for Birthday Event List */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    /* margin: 20px 0; */
-}
-
-.card {
-    /* background-color: var(--white); */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 500px;
-    margin: 10px;
-    text-align: center;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    color: var(--white);
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 1rem;
-    color: var(--black);
-}
-
-.card-orari {
-    background-color: var(--yellow);
-}
-
-.card-info {
-    background-color: var(--blue);
-}
-
-.card-costi {
-    background-color: var(--red);
-}
-
-.card-contatti {
-    background-color: var(--yellow);
-}
-
-/* Call to Action Button */
-button {
-    background-color: #FF6347; /* Tomato color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin: 20px auto;
-}
-
-button:hover {
-    background-color: #ff4500; /* Slightly darker for hover effect */
-}
-
-.padded {
-    padding: 30px;
-}
-
-/* Footer */
-footer {
-    background-color: var(--blue); /* Dark slate gray */
-    color: var(--black);
-    text-align: center;
-    padding: 20px;
-}
-
-footer p {
-    font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .card-container {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 480px) {
+    header {
+        font-size: 1.2em;
     }
 
-    .card {
-        width: 100%;
-        padding: 0px;
+    nav a {
+        padding: 8px;
     }
 
-    .hero h2 {
-        font-size: 1.5rem;
+    .costi li, .salato li, .dolce li, .temi li, .info li {
+        font-size: 0.9em;
     }
 
-    header h1 {
-        font-size: 2rem;
+    footer p {
+        font-size: 0.8em;
     }
 }
