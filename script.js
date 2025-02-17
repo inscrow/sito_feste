@@ -26,3 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
         addressLink.setAttribute('href', 'https://www.google.com/maps?q='+queryString);
     }
 });
+
+const temi = document.querySelectorAll('li.tema');
+temi.forEach(tema => {
+    tema.addEventListener('click', function() {
+        document.querySelectorAll('div.tema').forEach(temadiv => {
+            temadiv.classList.remove('active');
+        });
+        if (tema.classList.contains('magia')) {
+            document.querySelector('div.magia').classList.toggle('active');
+        } else if (tema.classList.contains('mistero')) {
+            document.querySelector('div.mistero').classList.toggle('active');
+        } else if (tema.classList.contains('favola')) {
+            document.querySelector('div.favola').classList.toggle('active');
+        } else {
+            document.querySelector('div.colori').classList.toggle('active');
+        }
+    })
+})

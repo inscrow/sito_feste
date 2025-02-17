@@ -59,7 +59,8 @@ nav a {
 
 section {
     background-color: var(--yellow);
-    padding: 20%;
+    padding: 10%;
+    margin: 20px;
 }
 
 section h1 {
@@ -81,6 +82,34 @@ ul.happy li:first-child {
     font-weight: bold;
     list-style-type: none;
     padding-left: 0;
+}
+
+ul.temi {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.temi {
+    width: 100%;
+    aspect-ratio: 723 / 586;
+    background-image: url(sfondo/ufficiale.png);
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+    background-size: contain;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.tema {
+    display: none;
+}
+
+div.tema.active {
+    display: block;
 }
 
 footer {
@@ -126,6 +155,7 @@ footer p {
 
     section {
         padding: 10px;
+        margin: 0;
     }
 
     .costi li, .salato li, .dolce li, .temi li, .info li {
