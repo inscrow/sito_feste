@@ -4,9 +4,10 @@
     --red: #ff2e1d;
     --yellow: #ffb737;
     --blue: #36a7d2;
+    --gradient: linear-gradient(to bottom right, var(--red), var(--yellow), var(--blue));
 }
 
-body {
+html, body {
     font-family: Arial, Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -58,14 +59,64 @@ nav a {
 }
 
 section {
-    background-color: var(--yellow);
-    padding: 10%;
-    margin: 20px;
+    height: 100%;
+    background-image: var(--gradient);
+    padding: 5%;
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5em;
+}
+
+section.header {
+    background-color: var(--white);
+    background-image: none;
+    margin: 0;
+}
+
+section.header img {
+    width: 50%;
 }
 
 section h1 {
     color: var(--white);
     font-size: 1.5em;
+}
+
+.calcola {
+    margin-top: 20px;
+}
+
+.calcola label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.calcola input,
+.calcola select {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.calcola button {
+    padding: 10px 15px;
+    background-color: var(--white);
+    color: var(--red);
+    border: none;
+    cursor: pointer;
+}
+
+.calcola button:hover {
+    background-color: var(--blue);
+}
+
+#total-price {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 div.costi,
@@ -85,20 +136,19 @@ ul.happy li:first-child {
 }
 
 ul.temi {
+    width: 100%;
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 div.temi {
-    width: 100%;
-    aspect-ratio: 723 / 586;
-    background-image: url(sfondo/ufficiale.png);
+    width: 50%;
+    aspect-ratio: 4 / 3;
+    background-image: url(sfondo/tavolo_festa_mini.JPG);
     background-repeat: no-repeat;
     background-origin: padding-box;
-    background-position: center;
-    background-size: contain;
-    /* text-align: center; */
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,13 +159,23 @@ div.tema {
 }
 
 div.tema.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    color: var(--white);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
 footer {
     background-color: var(--blue);
     text-align: center;
     padding: 10px;
+    width: 100%;
 }
 
 footer p {
@@ -123,8 +183,8 @@ footer p {
 }
 
 #contatti a {
-    text-decoration: none;
-    color: var(--blue);
+    text-decoration: underline;
+    color: var(--black);
 }
 
 @media (max-width: 768px) {
@@ -133,6 +193,11 @@ footer p {
         margin: 0 20px;
         cursor: pointer;
         z-index: 1001;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+
+    div.navbar {
+        background-color: transparent;
     }
 
     nav {
@@ -140,9 +205,10 @@ footer p {
         flex-direction: column;
         align-items: center;
     }
-    
+
     nav.active {
         display: flex;
+        background-color: var(--white);
     }
 
     h1 {
@@ -155,11 +221,38 @@ footer p {
 
     section {
         padding: 10px;
-        margin: 0;
+        margin: .5em;
+        border-radius: 1em;
+        background-image: none;
+    }
+
+    section:nth-of-type(3n+1) {
+        background-color: var(--yellow);
+    }
+
+    section:nth-of-type(3n+2) {
+        background-color: var(--red);
+    }
+
+    section:nth-of-type(3n+3) {
+        background-color: var(--blue);
+    }
+
+    section.header {
+        background-color: var(--white);
+    }
+
+    section.header img {
+        width: 100%;
     }
 
     .costi li, .salato li, .dolce li, .temi li, .info li {
         font-size: 1em;
+    }
+
+    div.temi {
+        padding: 5%;
+        max-height: 80%;
     }
 
     div.orari {

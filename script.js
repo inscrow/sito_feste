@@ -12,6 +12,33 @@ navLinks.forEach(link => {
     })
 })
 
+// calcola il prezzo in base a tipo di festa, torta e numero di bimbi
+function calculatePrice() {
+    const numKids = document.getElementById("num-kids").value;
+    const partyType = document.getElementById('party-type').value;
+    const cakeType = document.getElementById('cake-type').value;
+
+    if (numKids < 5) {
+        alert("Il numero minimo di bambini è 5");
+        return;
+    }
+
+    let basePrice = 9.50;
+    let totalPrice = basePrice;
+
+    if (cakeType == "premium") {
+        totalPrice += 2.0;
+    }
+
+    if (partyType == "happy") {
+        totalPrice += 2.0;
+    }
+
+    totalPrice *= numKids;
+
+    document.getElementById('calculated-price').textContent = `€${totalPrice.toFixed(2)}`;
+}
+
 function isMobile() {
     return /Mobi|Android/i.test(navigator.userAgent);
 }
@@ -43,4 +70,4 @@ temi.forEach(tema => {
             document.querySelector('div.colori').classList.toggle('active');
         }
     })
-})
+});

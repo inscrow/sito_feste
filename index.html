@@ -13,13 +13,19 @@
                 <div><a href="#costi">Costi</a></div>
                 <div><a href="#genitori">Genitori</a></div>
                 <div><a href="#temi">Temi</a></div>
-                <div><a href="#orari">Orari</a></div> 
+                <div><a href="#orari">Orari</a></div>
+                <div><a href="#torte">Torte</a></div>
                 <div><a href="#info">Informazioni</a></div>
                 <div><a href="#contatti">Contatti</a></div>
+                <div><a href="#calcola-prezzo">Calcola Prezzo</a></div>
             </nav>
         </div>
+
         <header>Festeggia con noi il tuo compleanno!</header>
 
+        <section class="header">
+            <img src="sfondo/ufficiale.png" alt="Immagine ufficile della locandina">
+        </section>
 
         <section id="costi">
             <h1>Costi</h1>
@@ -42,6 +48,7 @@
             <h1>Genitori</h1>
             <p>La consumazione dei genitori non è compresa nei costi, però abbiamo dei menù speciali solo per le feste</p>
             <div class="menu">
+                <!-- TODO: aggiungere foto dei menù genitori, magari con le immagini che si girano per mostrare il prezzo -->
                 <ul class="salato">
                     <li>Menù salati</li>
                     <li><p>Per 3 genitori:</p><p>(Tasty Basket + 3 bibite + 3 patate piccole)</p><p>€14,90</p></li>
@@ -59,10 +66,10 @@
             <h1>Temi</h1>
             <p>Per la festa si può scegliere uno di 4 temi:</p>
             <ul class="temi">
-                <li class="tema magia">Questa sì che è magia</li>
-                <li class="tema mistero">A caccia della traccia</li>
-                <li class="tema favola">Un giorno da favola</li>
-                <li class="tema colori">Un mondo di colori</li>
+                <li class="tema magia">Magia</li>
+                <li class="tema mistero">Mistero</li>
+                <li class="tema favola">Favola</li>
+                <li class="tema colori">Colori</li>
             </ul>
             <div class="temi">
                 <div class="tema magia">
@@ -79,7 +86,7 @@
                 </div>
                 <div class="tema colori">
                 <h2>Un mondo di colori</h2>
-                    <p>Giochi a tema colore oppure trucca bimbi</p>
+                <p>Giochi a tema colore oppure trucca bimbi</p>
                 </div>
             </div>
         </section>
@@ -98,7 +105,26 @@
                 </ul>
             </div>
         </section>
-        
+
+        <section id="torte">
+            <h1>Torte</h1>
+            <p>
+                Le nostre torte sono al gusto cioccolato o fragola e si può scegliere
+                tra torta base e premium. L'unica differenza tra torta base e premium
+                è la dimensione.
+            </p>
+            <p>Se una torta non fosse abbastanza:</p>
+            <ul class="torte">
+                <li>Torta base aggiuntiva: €???</li>
+                <li>Torta premium aggiuntiva: €???</li>
+            </ul>
+            <p>È anche possibile ordinare una torta del McCafè intera:</p>
+            <ul class="torte">
+                <li>Torta multistrato: €???</li>
+                <li>Cheesecake alle fragole: €???</li>
+            </ul>
+        </section>
+
         <section id="info">
             <h1>Informazioni</h1>
             <p>Ecco alcune informazioni aggiuntive:</p>
@@ -108,16 +134,46 @@
                 <li>il numero minimo di bambini è 5</li>
                 <li>avvisare almeno due giorni prima per allergie</li>
                 <li>è richiesta la presenza di almeno un genitore ogni 3 bambini</li>
+                <li>la festa si svolge esclusivamente all'interno del locale</li>
             </ul>
         </section>
 
         <section id="contatti">
             <h1>Contatti</h1>
+            <p>Per maggiori chiarimenti puoi chiamare il numero:</p>
             <div class="telefono">
                 <p><a href="tel:+390131754073">0131 754073</a></p>
             </div>
+            <p>Oppure puoi venirci a trovare al nostro locale:</p>
             <div class="indirizzo">
                 <p><a id="address-link" href="#">Via Giordano Bruno 216, Alessandria</a></p>
+            </div>
+        </section>
+
+        <section id="calcola-prezzo">
+            <div class="calcola">
+                <h1>Calcola il prezzo</h1>
+                <label for="num-kids">Numero di bambini:</label>
+                <input type="number" id="num-kids" placeholder="Inserisci il numero di bambini" min="5">
+
+                <label for="party-type">Tipo di festa:</label>
+                <select id="party-type">
+                    <option value="base">Festa di un'ora e mezza</option>
+                    <option value="happy">Festa di due ore</option>
+                </select>
+
+                <label for="cake-type">Tipo di torta:</label>
+                <select id="cake-type">
+                    <option value="base">Torta base</option>
+                    <option value="premium">Torta premium</option>
+                </select>
+
+                <button onclick="calculatePrice()">Calcola prezzo</button>
+
+                <div id="total-price">
+                    <p>Prezzo totale: <span id="calculated-price">€0</span></p>
+                </div>
+                <p>Il prezzo mostrato non comprende la consumazione dei genitori</p>
             </div>
         </section>
 
@@ -127,6 +183,6 @@
             <p>Sede legale: Kairos s.r.l.</p>
         </footer>
 
-        <script src="script.js"> </script>
+        <script src="script.js"></script>
     </body>
-</html>
+    </html>
