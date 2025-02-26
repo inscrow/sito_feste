@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// activate theme
 const temi = document.querySelectorAll('li.tema');
 temi.forEach(tema => {
     tema.addEventListener('click', function() {
@@ -80,3 +81,21 @@ temi.forEach(tema => {
         }
     })
 });
+
+// activate sections for transition effect
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
+
+function handleScroll() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        if (isInViewport(section)) {
+            section.classList.add('section-visible');
+        }
+    })
+}
+
+window.addEventListener("scroll", handleScroll);
+// window.addEventListener("load", handleScroll);

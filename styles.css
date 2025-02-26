@@ -227,6 +227,14 @@ footer p {
         margin: .5em;
         border-radius: 1em;
         background-image: none;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    section.section-visible {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     section:nth-of-type(3n+1) {
@@ -255,7 +263,12 @@ footer p {
 
     div.temi {
         padding: 5%;
-        max-height: 80%;
+        aspect-ratio: 16 / 9;
+        width: 80%;
+    }
+
+    div.tema {
+        font-size: 1em;
     }
 
     div.orari {
