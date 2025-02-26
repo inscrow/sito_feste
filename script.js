@@ -43,11 +43,20 @@ function isMobile() {
     return /Mobi|Android/i.test(navigator.userAgent);
 }
 
+function isIphone() {
+    return /iPhone/i.test(navigator.userAgent);
+}
+
 // cambia il link della posizione in base al dispositivo
 document.addEventListener('DOMContentLoaded', function() {
     const addressLink = document.getElementById('address-link');
     const queryString = "McDonald's+Via+Giordano+Bruno,+Alessandria";
-    if (isMobile()) {
+    const appleMapsUrl = "https://maps.google.com/?addr=44.9197537,8.5938191&dirflg=d";
+
+    if (isIphone()) {
+        addressLink.setAttribute('href', appleMapsUrl);
+    }
+    else if (isMobile()) {
         addressLink.setAttribute('href', 'geo:0,0?q='+queryString);
     } else {
         addressLink.setAttribute('href', 'https://www.google.com/maps?q='+queryString);
