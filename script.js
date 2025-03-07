@@ -50,6 +50,8 @@ function isIphone() {
 // cambia il link della posizione in base al dispositivo
 document.addEventListener('DOMContentLoaded', function() {
     const addressLink = document.getElementById('address-link');
+    const latitude = 44.9197537;
+    const longitude = 8.5938191;
     const queryString = "McDonald's+Via+Giordano+Bruno,+Alessandria";
     const appleMapsUrl = "https://maps.apple.com/place?q=McDonald%27s&ll=44.9197537%2C8.5938191&auid=5294573549417230329&lsp=9902&address=Via%20Bruno%20Giordano%20216%2C%2015121%20Alessandria%2C%20Italia";
 
@@ -57,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         addressLink.setAttribute('href', appleMapsUrl);
     }
     else if (isMobile()) {
-        addressLink.setAttribute('href', 'geo:0,0?q='+queryString);
+        addressLink.setAttribute('href', `geo:${latitude},${longitude}?q=${queryString}`);
     } else {
         addressLink.setAttribute('href', 'https://www.google.com/maps?q='+queryString);
     }
