@@ -51,7 +51,7 @@ function isIphone() {
 document.addEventListener('DOMContentLoaded', function() {
     const addressLink = document.getElementById('address-link');
     const queryString = "McDonald's+Via+Giordano+Bruno,+Alessandria";
-    const appleMapsUrl = "https://maps.apple.com/?addr=44.9197537,8.5938191&dirflg=d";
+    const appleMapsUrl = "https://maps.apple.com/place?q=McDonald%27s&ll=44.9197537%2C8.5938191&auid=5294573549417230329&lsp=9902&address=Via%20Bruno%20Giordano%20216%2C%2015121%20Alessandria%2C%20Italia";
 
     if (isIphone()) {
         addressLink.setAttribute('href', appleMapsUrl);
