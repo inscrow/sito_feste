@@ -57,8 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (isIphone()) {
         addressLink.setAttribute('href', appleMapsUrl);
-    }
-    else if (isMobile()) {
+    } else if (isMobile()) {
         addressLink.setAttribute('href', `geo:${latitude},${longitude}?q=${queryString}`);
     } else {
         addressLink.setAttribute('href', 'https://www.google.com/maps?q='+queryString);
