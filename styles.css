@@ -228,13 +228,13 @@ footer p {
         border-radius: 1em;
         background-image: none;
         opacity: 0;
-        transform: translateY(50px);
+        /*transform: translateY(50px);*/
         transition: opacity 1s ease-out, transform 1s ease-out;
     }
 
     section.section-visible {
         opacity: 1;
-        transform: translateY(0);
+        /*transform: translateY(0);*/
     }
 
     section:nth-of-type(3n+1) {

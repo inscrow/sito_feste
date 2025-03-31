@@ -86,7 +86,7 @@ temi.forEach(tema => {
 // activate sections for transition effect
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
-    return rect.top >= 0 && rect.top <= window.innerHeight;
+    return 0 <= rect.top && rect.top <= window.innerHeight;
 }
 
 function handleScroll() {
