@@ -23,7 +23,7 @@ function calculatePrice() {
         return;
     }
 
-    let basePrice = 9.50;
+    let basePrice = 9.80;
     let totalPrice = basePrice;
 
     if (cakeType == "premium") {
