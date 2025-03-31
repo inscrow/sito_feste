@@ -10,7 +10,7 @@ navLinks.forEach(link => link.addEventListener('click', toggleNav));
 // SELEZIONE TEMA
 function hideThemes() {
     document.querySelectorAll('div.tema').forEach(temadiv => {
-	temadiv.classList.remove('active');
+        temadiv.classList.remove('active');
     });
 }
 
@@ -21,15 +21,15 @@ function seeTheme(theme) {
 const temi = document.querySelectorAll('li.tema');
 temi.forEach(tema => {
     tema.addEventListener('click', () => {
-	hideThemes();
+        hideThemes();
         if (tema.classList.contains('magia')) {
-	    seeTheme('magia');
+            seeTheme('magia');
         } else if (tema.classList.contains('mistero')) {
-	    seeTheme('mistero');
+            seeTheme('mistero');
         } else if (tema.classList.contains('favola')) {
-	    seeTheme('favola');
+            seeTheme('favola');
         } else {
-	    seeTheme('colori');
+            seeTheme('colori');
         }
     })
 });
@@ -90,7 +90,10 @@ function calculatePrice() {
 // SCROLL EFFECT
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
-    return 0 <= rect.top && rect.top <= window.innerHeight;
+    // le sezioni diventano visibili se almeno uno tra lato superiore e
+    // inferiore è visibile
+    return (0 <= rect.top && rect.top <= window.innerHeight) ||
+           (0 <= rect.bottom && rect.bottom <= window.innerHeight);
 }
 
 function handleScroll() {
