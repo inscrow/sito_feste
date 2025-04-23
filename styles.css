@@ -297,6 +297,7 @@ footer p {
 
 /* change color based on OS dark mode */
 @media (prefers-color-scheme: dark) {
+    html,
     body,
     header,
     .navbar,
