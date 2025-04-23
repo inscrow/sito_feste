@@ -294,3 +294,17 @@ footer p {
         font-size: 0.8em;
     } */
 }
+
+/* change color based on OS dark mode */
+@media (prefers-color-scheme: dark) {
+    body,
+    header,
+    .navbar,
+    nav,
+    nav a,
+    section.header,
+    .calcola button {
+        background-color: var(--black);
+        color: var(--white);
+    }
+}
