@@ -300,11 +300,13 @@ footer p {
     html,
     body,
     header,
-    .navbar,
+    div.navbar,
+    div.hamburger,
+    nav.active,
     nav,
     nav a,
     section.header,
-    .calcola button {
+    div.calcola button {
         background-color: var(--black);
         color: var(--white);
     }
