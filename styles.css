@@ -136,6 +136,11 @@ div.orari {
     display: flex;
 }
 
+ul.salato,
+ul.dolce {
+    width: 50%;
+}
+
 ul.costi li:first-child,
 ul.salato li:first-child,
 ul.dolce li:first-child,
