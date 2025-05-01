@@ -1,3 +1,17 @@
+// CONSTANTS
+// This is used in a couple places, both in html and this script
+const prezzoBase = 9.80;
+const aggiuntaPremium = 2.00;
+const aggiuntaHappy = 2.00;
+
+// Dizionario con i prezzi, basta cambiare i valori qua sopra
+const prices = {
+    base: Number(prezzoBase).toFixed(2),
+    premium: Number(prezzoBase + aggiuntaPremium).toFixed(2),
+    happy: Number(prezzoBase + aggiuntaHappy).toFixed(2),
+    happyPremium: Number(prezzoBase + aggiuntaHappy + aggiuntaPremium).toFixed(2),
+};
+
 // NAVBAR TOGGLING
 function toggleNav() {
     var nav = document.querySelector('nav');
@@ -6,6 +20,21 @@ function toggleNav() {
 
 const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
+
+// CREAZIONE PREZIARIO
+const wrapperListino = document.querySelector('div.costi');
+wrapperListino.innerHTML = `
+<ul class="costi">
+    <li>Festa base (1 ora e mezza)</li>
+    <li>Torta base: €${prices["base"]} a bambino</li>
+    <li>Torta premium: €${prices["premium"]} a bambino</li>
+</ul>
+<ul class="costi">
+    <li>Festa happy (2 ore)</li>
+    <li>Torta base: €${prices["happy"]} a bambino</li>
+    <li>Torta premium: €${prices["happyPremium"]} a bambino</li>
+</ul>
+`;
 
 // SELEZIONE TEMA
 function hideThemes() {
@@ -71,15 +100,14 @@ function calculatePrice() {
         return;
     }
 
-    let basePrice = 9.80;
-    let totalPrice = basePrice;
+    let totalPrice = prezzoBase;
 
     if (cakeType == "premium") {
-        totalPrice += 2.0;
+        totalPrice += aggiuntaPremium;
     }
 
     if (partyType == "happy") {
-        totalPrice += 2.0;
+        totalPrice += aggiuntaHappy;
     }
 
     totalPrice *= numKids;
