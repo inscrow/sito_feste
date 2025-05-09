@@ -132,8 +132,22 @@ section h1 {
 
 div.costi,
 div.menu,
-div.orari {
+div.orari,
+div.contatti {
     display: flex;
+}
+
+div.contatti {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+div.giordano-bruno,
+div.marengo {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    align-items: center;
 }
 
 ul.salato,
@@ -281,6 +295,10 @@ footer p {
 
     div.orari {
         display: block;
+    }
+
+    div.contatti {
+        flex-direction: column;
     }
 }
 
