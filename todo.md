@@ -11,3 +11,5 @@
 - [X] aggiungere costi per torte aggiuntive nella sezione costi
 
 - [X] aggiungere sezione per menù genitori
+
+- [X] add contact information for the other resturant too

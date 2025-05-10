@@ -74,26 +74,19 @@ function isIphone() {
 
 // cambia il link della posizione in base al dispositivo
 document.addEventListener('DOMContentLoaded', function() {
-    const addressLinkGiordanoBruno = document.querySelector('div.giordano-bruno a.address-link');
-    const latitudeGiordanoBruno = 44.9197537;
-    const longitudeGiordanoBruno = 8.5938191;
-    const queryGiordanoBruno = "McDonald's+Via+Giordano+Bruno+216,+Alessandria";
-    const appleMapsUrlGiordanoBruno = "https://maps.apple.com/place?q=McDonald%27s&ll=44.9197537%2C8.5938191&auid=5294573549417230329&lsp=9902&address=Via%20Bruno%20Giordano%20216%2C%2015121%20Alessandria%2C%20Italia";
-    const addressLinkMarengo = document.querySelector('div.marengo a.address-link');
-    const latitudeMarengo = 44.9094009;
-    const longitudeMarengo = 8.6312237;
-    const queryMarengo = "McDonald's+Via+Marengo+159,+Alessandria";
-    const appleMapsUrlMarengo = "https://maps.apple.com/place?address=Via%20Marengo%20159,%2015121%20Alessandria,%20Italia&coordinate=44.909394,8.631327&name=McDonald%27s&place-id=I29E79DAC233C31AC&map=explore";
+    const addressLinkGiordanoBruno = document.googleSelector('div.giordano-bruno a.address-link');
+    const googleGiordanoBruno = "https://www.google.com/maps?q=McDonald's+Via+Giordano+Bruno+216,+Alessandria";
+    const appleUrlGiordanoBruno = "https://maps.apple.com/place?q=McDonald%27s&ll=44.9197537%2C8.5938191&auid=5294573549417230329&lsp=9902&address=Via%20Bruno%20Giordano%20216%2C%2015121%20Alessandria%2C%20Italia";
+    const addressLinkMarengo = document.googleSelector('div.marengo a.address-link');
+    const googleMarengo = "https://www.google.com/maps?q=McDonald's+Via+Marengo+159,+Alessandria";
+    const appleUrlMarengo = "https://maps.apple.com/place?address=Via%20Marengo%20159,%2015121%20Alessandria,%20Italia&coordinate=44.909394,8.631327&name=McDonald%27s&place-id=I29E79DAC233C31AC&map=explore";
 
     if (isIphone()) {
-        addressLinkGiordanoBruno.setAttribute('href', appleMapsUrlGiordanoBruno);
-        addressLinkMarengo.setAttribute('href', appleMapsUrlMarengo);
-    } else if (isMobile()) {
-        addressLinkGiordanoBruno.setAttribute('href', `geo:${latitudeGiordanoBruno},${longitudeGiordanoBruno}?q=${queryGiordanoBruno}`);
-        addressLinkMarengo.setAttribute('href', `geo:${latitudeMarengo},${longitudeMarengo}?q=${queryMarengo}`);
+        addressLinkGiordanoBruno.setAttribute('href', appleUrlGiordanoBruno);
+        addressLinkMarengo.setAttribute('href', appleUrlMarengo);
     } else {
-        addressLinkGiordanoBruno.setAttribute('href', 'https://www.google.com/maps?q='+queryGiordanoBruno);
-        addressLinkMarengo.setAttribute('href', 'https://www.google.com/maps?q='+queryMarengo);
+        addressLinkGiordanoBruno.setAttribute('href', googleGiordanoBruno);
+        addressLinkMarengo.setAttribute('href', googleMarengo);
     }
 });
 
