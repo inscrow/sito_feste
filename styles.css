@@ -150,14 +150,20 @@ div.marengo {
     align-items: center;
 }
 
-ul.salato,
-ul.dolce {
+section.genitori {
+    display: flex;
+    flex-direction: column;
+}
+
+div.salato img {
+    width: 100%;
+}
+
+div.dolce > div {
     width: 50%;
 }
 
 ul.costi li:first-child,
-ul.salato li:first-child,
-ul.dolce li:first-child,
 ul.base li:first-child,
 ul.happy li:first-child {
     font-weight: bold;
@@ -279,7 +285,7 @@ footer p {
         width: 100%;
     }
 
-    .costi li, .salato li, .dolce li, .temi li, .info li {
+    .costi li, .temi li, .info li {
         font-size: 1em;
     }
 
@@ -311,7 +317,7 @@ footer p {
         padding: 8px;
     }
 
-    .costi li, .salato li, .dolce li, .temi li, .info li {
+    .costi li, .temi li, .info li {
         font-size: 0.9em;
     }
 
