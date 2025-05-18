@@ -159,8 +159,29 @@ div.salato img {
     width: 100%;
 }
 
-div.dolce > div {
+div.dolce {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+}
+
+div.dolce img {
+    object-fit: cover;
     width: 50%;
+}
+
+div.dolce ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.dolce li {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
 }
 
 ul.costi li:first-child,
