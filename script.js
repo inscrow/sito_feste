@@ -43,22 +43,39 @@ function hideThemes() {
     });
 }
 
-function seeTheme(theme) {
-    document.querySelector('div.' + theme).classList.toggle('active');
+function hideItem(item) {
+    document.querySelector('div.' + item).classList.remove('active');
 }
+
+function toggleItemVisibility(item) {
+    document.querySelector('div.' + item).classList.toggle('active');
+}
+
+const menus = document.querySelectorAll('li.menu');
+menus.forEach(menu => {
+    menu.addEventListener('click', () => {
+        hideItem('salato');
+        hideItem('dolce');
+        if (menu.classList.contains('salato')) {
+            toggleItemVisibility('salato');
+        } else {
+            toggleItemVisibility('dolce');
+        }
+    })
+});
 
 const temi = document.querySelectorAll('li.tema');
 temi.forEach(tema => {
     tema.addEventListener('click', () => {
         hideThemes();
         if (tema.classList.contains('magia')) {
-            seeTheme('magia');
+            toggleItemVisibility('magia');
         } else if (tema.classList.contains('mistero')) {
-            seeTheme('mistero');
+            toggleItemVisibility('mistero');
         } else if (tema.classList.contains('favola')) {
-            seeTheme('favola');
+            toggleItemVisibility('favola');
         } else {
-            seeTheme('colori');
+            toggleItemVisibility('colori');
         }
     })
 });
@@ -74,10 +91,10 @@ function isIphone() {
 
 // cambia il link della posizione in base al dispositivo
 document.addEventListener('DOMContentLoaded', function() {
-    const addressLinkGiordanoBruno = document.googleSelector('div.giordano-bruno a.address-link');
+    const addressLinkGiordanoBruno = document.querySelector('div.giordano-bruno a.address-link');
     const googleGiordanoBruno = "https://www.google.com/maps?q=McDonald's+Via+Giordano+Bruno+216,+Alessandria";
     const appleUrlGiordanoBruno = "https://maps.apple.com/place?q=McDonald%27s&ll=44.9197537%2C8.5938191&auid=5294573549417230329&lsp=9902&address=Via%20Bruno%20Giordano%20216%2C%2015121%20Alessandria%2C%20Italia";
-    const addressLinkMarengo = document.googleSelector('div.marengo a.address-link');
+    const addressLinkMarengo = document.querySelector('div.marengo a.address-link');
     const googleMarengo = "https://www.google.com/maps?q=McDonald's+Via+Marengo+159,+Alessandria";
     const appleUrlMarengo = "https://maps.apple.com/place?address=Via%20Marengo%20159,%2015121%20Alessandria,%20Italia&coordinate=44.909394,8.631327&name=McDonald%27s&place-id=I29E79DAC233C31AC&map=explore";
 
