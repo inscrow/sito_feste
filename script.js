@@ -51,34 +51,29 @@ function toggleItemVisibility(item) {
     document.querySelector('div.' + item).classList.toggle('active');
 }
 
-const menus = document.querySelectorAll('li.menu');
-menus.forEach(menu => {
-    menu.addEventListener('click', () => {
-        hideItem('salato');
-        hideItem('dolce');
-        if (menu.classList.contains('salato')) {
-            toggleItemVisibility('salato');
-        } else {
-            toggleItemVisibility('dolce');
-        }
-    })
-});
+const menuSelectorHandler = function(event) {
+    hideItem('salato');
+    hideItem('dolce');
+    if (event.target.classList.contains('salato')) {
+        toggleItemVisibility('salato');
+    } else {
+        toggleItemVisibility('dolce');
+    }
+}
 
-const temi = document.querySelectorAll('li.tema');
-temi.forEach(tema => {
-    tema.addEventListener('click', () => {
-        hideThemes();
-        if (tema.classList.contains('magia')) {
-            toggleItemVisibility('magia');
-        } else if (tema.classList.contains('mistero')) {
-            toggleItemVisibility('mistero');
-        } else if (tema.classList.contains('favola')) {
-            toggleItemVisibility('favola');
-        } else {
-            toggleItemVisibility('colori');
-        }
-    })
-});
+
+const themeSelectorHandler = function(event) {
+    hideThemes();
+    if (event.target.classList.contains('magia')) {
+        toggleItemVisibility('magia');
+    } else if (event.target.classList.contains('mistero')) {
+        toggleItemVisibility('mistero');
+    } else if (event.target.classList.contains('favola')) {
+        toggleItemVisibility('favola');
+    } else {
+        toggleItemVisibility('colori');
+    }
+}
 
 // MAP LINK
 function isMobile() {

@@ -15,8 +15,13 @@ html, body {
     overflow-x: hidden;
 }
 
-header {
+html {
     background-color: var(--white);
+    background-image: url(assets/happy_meal_background.png);
+    background-repeat: space;
+}
+
+header {
     color: var(--red);
     text-align: center;
     padding: 10px 0;
@@ -82,8 +87,6 @@ section.section-visible {
 
 
 section.header {
-    background-color: var(--white);
-    background-image: none;
     margin: 0;
 }
 
@@ -227,8 +230,8 @@ ul.happy li:first-child {
     padding-left: 0;
 }
 
-ul.temi,
-ul.menu {
+div.temi-selector,
+div.menu-selector {
     width: 100%;
     list-style: none;
     display: flex;
@@ -236,8 +239,8 @@ ul.menu {
     padding: 0;
 }
 
-ul.temi > li,
-ul.menu > li {
+div.temi-selector > button,
+div.menu-selector > button {
     border: 1px solid black;
     border-radius: 1em;
     padding: 1em;
@@ -343,9 +346,9 @@ footer p {
         background-color: var(--blue);
     }
 
-    section.header {
-        background-color: var(--white);
-    }
+    /* section.header { */
+    /*     background-color: var(--white); */
+    /* } */
 
     section.header img {
         width: 100%;
@@ -403,16 +406,20 @@ footer p {
 /* change color based on OS dark mode */
 @media (prefers-color-scheme: dark) {
     html,
-    body,
     header,
     div.navbar,
     div.hamburger,
     nav.active,
     nav,
     nav a,
-    section.header,
     div.calcola button {
         background-color: var(--black);
         color: var(--white);
+    }
+
+    html {
+        background-color: var(--black);
+        background-image: url(assets/happy_meal_background.png);
+        background-repeat: space;
     }
 }

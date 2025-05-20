@@ -57,10 +57,10 @@
         <section id="genitori">
             <h1>Genitori</h1>
             <p>Questi sono i nostri menù pensati per voi genitori</p>
-            <ul class="menu">
-                <li class="menu salato">Salato</li>
-                <li class="menu dolce">Dolce</li>
-            </ul>
+            <div class="menu-selector">
+                <button class="menu salato" onclick="menuSelectorHandler(event)">Salato</button>
+                <button class="menu dolce" onclick="menuSelectorHandler(event)">Dolce</button>
+            </div>
             <div class="menu wrapper">
                 <div class="menu salato">
                     <img src="./assets/menu_salato_3bibite.png" alt="1 Tasty Basket e 3 bibite a 14,90" />
@@ -78,12 +78,12 @@
         <section id="temi">
             <h1>Temi</h1>
             <p>Per la festa si può scegliere uno di 4 temi:</p>
-            <ul class="temi">
-                <li class="tema magia">Magia</li>
-                <li class="tema mistero">Mistero</li>
-                <li class="tema favola">Favola</li>
-                <li class="tema colori">Colori</li>
-            </ul>
+            <div class="temi-selector">
+                <button class="tema magia" onclick="themeSelectorHandler(event)">Magia</button>
+                <button class="tema mistero" onclick="themeSelectorHandler(event)">Mistero</button>
+                <button class="tema favola" onclick="themeSelectorHandler(event)">Favola</button>
+                <button class="tema colori" onclick="themeSelectorHandler(event)">Colori</button>
+            </div>
             <div class="temi">
                 <div class="tema magia">
                     <h2>Questa sì che è magia</h2>
