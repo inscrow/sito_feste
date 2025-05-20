@@ -87,6 +87,8 @@ section.section-visible {
 
 
 section.header {
+    background-color: transparent;
+    background-image: none;
     margin: 0;
 }
 
@@ -346,9 +348,10 @@ footer p {
         background-color: var(--blue);
     }
 
-    /* section.header { */
-    /*     background-color: var(--white); */
-    /* } */
+    section.header {
+        background-image: none;
+        background-color: transparent;
+    }
 
     section.header img {
         width: 100%;
