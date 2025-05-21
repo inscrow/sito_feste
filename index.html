@@ -27,7 +27,7 @@
     </head>
     <body>
         <div class="navbar">
-            <div class="hamburger" onclick="toggleNav()">&#9776;</div>
+            <div class="hamburger">&#9776;</div>
             <nav>
                 <div><a href="#costi">Costi</a></div>
                 <div><a href="#genitori">Genitori</a></div>
@@ -58,8 +58,8 @@
             <h1>Genitori</h1>
             <p>Questi sono i nostri menù pensati per voi genitori</p>
             <div class="menu-selector">
-                <button class="menu salato" onclick="selectorHandler(event)">Salato</button>
-                <button class="menu dolce" onclick="selectorHandler(event)">Dolce</button>
+                <button class="menu salato">Salato</button>
+                <button class="menu dolce">Dolce</button>
             </div>
             <div class="menu-wrapper">
                 <div class="menu salato">
@@ -79,10 +79,10 @@
             <h1>Temi</h1>
             <p>Per la festa si può scegliere uno di 4 temi:</p>
             <div class="temi-selector">
-                <button class="tema magia" onclick="selectorHandler(event)">Magia</button>
-                <button class="tema mistero" onclick="selectorHandler(event)">Mistero</button>
-                <button class="tema favola" onclick="selectorHandler(event)">Favola</button>
-                <button class="tema colori" onclick="selectorHandler(event)">Colori</button>
+                <button class="tema magia">Magia</button>
+                <button class="tema mistero">Mistero</button>
+                <button class="tema favola">Favola</button>
+                <button class="tema colori">Colori</button>
             </div>
             <div class="temi-wrapper">
                 <div class="tema magia">
@@ -208,7 +208,7 @@
                     <option value="premium">Torta premium</option>
                 </select>
 
-                <button onclick="calculatePrice()">Calcola prezzo</button>
+                <button>Calcola prezzo</button>
 
                 <div id="total-price">
                     <p>Prezzo totale: <span id="calculated-price">€0</span></p>

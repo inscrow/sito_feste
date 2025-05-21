@@ -18,6 +18,7 @@ function toggleNav() {
     nav.classList.toggle('active');
 }
 
+document.querySelector("div.hamburger").addEventListener("click", toggleNav);
 const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
 
@@ -58,11 +59,13 @@ const selectorHandler = function(event) {
     toggleItemVisibility(classes.toString().replace(" ", "."));
 }
 
-// MAP LINK
-function isMobile() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-}
+let togglingButtons = [];
+togglingButtons.push(...document.querySelectorAll("button.menu"));
+togglingButtons.push(...document.querySelectorAll("button.tema"));
 
+togglingButtons.forEach(element => element.addEventListener("click", selectorHandler));
+
+// MAP LINK
 function isIphone() {
     return /iPhone/i.test(navigator.userAgent);
 }
@@ -110,6 +113,8 @@ function calculatePrice() {
 
     document.getElementById('calculated-price').textContent = `€${totalPrice.toFixed(2)}`;
 }
+
+document.querySelector("div.calcola > button").addEventListener("click", _ => calculatePrice());
 
 // SCROLL EFFECT
 function isInViewport(element) {
