@@ -164,7 +164,7 @@ section.genitori {
     flex-direction: column;
 }
 
-div.menu.wrapper {
+div.menu-wrapper {
     aspect-ratio: 1 / 1;
     width: 100%;
 }
@@ -250,7 +250,7 @@ div.menu-selector > button {
     color: var(--black);
 }
 
-div.temi {
+div.temi-wrapper {
     width: 50%;
     aspect-ratio: 4 / 3;
     background-image: url(sfondo/tavolo_festa_mini.JPG);
@@ -361,11 +361,11 @@ footer p {
         font-size: 1em;
     }
 
-    .costi li, .temi li, .info li {
+    .costi li, .info li {
         font-size: 1em;
     }
 
-    div.temi {
+    div.temi-wrapper {
         padding: 5%;
         aspect-ratio: 16 / 9;
         width: 80%;
@@ -393,7 +393,7 @@ footer p {
         padding: 8px;
     }
 
-    .costi li, .temi li, .info li {
+    .costi li, .info li {
         font-size: 0.9em;
     }
 

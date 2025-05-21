@@ -36,43 +36,26 @@ wrapperListino.innerHTML = `
 </ul>
 `;
 
-// SELEZIONE TEMA
-function hideThemes() {
-    document.querySelectorAll('div.tema').forEach(temadiv => {
-        temadiv.classList.remove('active');
-    });
-}
-
-function hideItem(item) {
-    document.querySelector('div.' + item).classList.remove('active');
-}
-
+// SELEZIONE MENÙ e TEMA
 function toggleItemVisibility(item) {
     document.querySelector('div.' + item).classList.toggle('active');
 }
 
-const menuSelectorHandler = function(event) {
-    hideItem('salato');
-    hideItem('dolce');
-    if (event.target.classList.contains('salato')) {
-        toggleItemVisibility('salato');
-    } else {
-        toggleItemVisibility('dolce');
-    }
-}
+const selectorHandler = function(event) {
+    const button = event.target;
+    const classes = button.classList;
 
-
-const themeSelectorHandler = function(event) {
-    hideThemes();
-    if (event.target.classList.contains('magia')) {
-        toggleItemVisibility('magia');
-    } else if (event.target.classList.contains('mistero')) {
-        toggleItemVisibility('mistero');
-    } else if (event.target.classList.contains('favola')) {
-        toggleItemVisibility('favola');
+    if (classes.contains("menu")) {
+        document.querySelectorAll("div.menu").forEach((element) => {
+            element.classList.remove("active");
+        });
     } else {
-        toggleItemVisibility('colori');
+        document.querySelectorAll("div.tema").forEach((element) => {
+            element.classList.remove("active");
+        });
     }
+
+    toggleItemVisibility(classes.toString().replace(" ", "."));
 }
 
 // MAP LINK
