@@ -152,6 +152,7 @@ section.header img {
 section h1 {
     color: var(--white);
     font-size: 1.5em;
+    text-align: center;
 }
 
 section#genitori h2 {
@@ -197,6 +198,11 @@ div.costi,
 div.orari,
 div.contatti {
     display: flex;
+}
+
+div.costi {
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 div.contatti {
@@ -283,6 +289,11 @@ ul.happy li:first-child {
     font-weight: bold;
     list-style-type: none;
     padding-left: 0;
+}
+
+ul.costi {
+    width: 50%;
+    padding: 10px;
 }
 
 div.temi-selector,
@@ -425,6 +436,7 @@ footer p {
 
     .costi li, .info li {
         font-size: 1em;
+        list-style: none;
     }
 
     div.temi-wrapper {
@@ -443,6 +455,12 @@ footer p {
 
     div.contatti {
         flex-direction: column;
+        align-items: center;
+    }
+
+    div.giordano-bruno,
+    div.marengo {
+        width: 100%;
     }
 }
 
