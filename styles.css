@@ -19,8 +19,6 @@ html, body {
 
 html {
     background-color: var(--white);
-    background-image: url(assets/happy_meal_background.png);
-    background-repeat: space;
 }
 
 header {
@@ -437,7 +435,5 @@ footer p {
 
     html {
         background-color: var(--black);
-        background-image: url(assets/happy_meal_background.png);
-        background-repeat: space;
     }
 }
