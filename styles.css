@@ -9,8 +9,57 @@
     --gradient: linear-gradient(to bottom right, var(--red), var(--yellow), var(--blue));
 }
 
+/* Speedee font face */
+@font-face {
+    font-family: 'Speedee';
+    src: url('fonts/Web/WOFF2/Speedee_W_Rg.woff2') format('woff2'),
+        url('fonts/Web/WOFF/Speedee_W_Rg.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Speedee';
+    src: url('fonts/Web/WOFF2/Speedee_W_Bd.woff2') format('woff2'),
+        url('fonts/Web/WOFF/Speedee_W_Bd.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Speedee';
+    src: url('fonts/Web/WOFF2/Speedee_W_Lt.woff2') format('woff2'),
+        url('fonts/Web/WOFF/Speedee_W_Lt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Speedee';
+    src: url('fonts/Web/WOFF2/Speedee_W_It.woff2') format('woff2'),
+        url('fonts/Web/WOFF/Speedee_W_It.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Speedee';
+    src: url('fonts/Web/WOFF2/Speedee_W_BdIt.woff2') format('woff2'),
+        url('fonts/Web/WOFF/Speedee_W_BdIt.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Speedee';
+    src: url('fonts/Web/WOFF2/Speedee_W_LtIt.woff2') format('woff2'),
+        url('fonts/Web/WOFF/Speedee_W_LtIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
 html, body {
-    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-family: Speedee, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
