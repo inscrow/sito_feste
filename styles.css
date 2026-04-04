@@ -70,7 +70,7 @@ html {
     background-color: var(--white);
 }
 
-header {
+h2 {
     color: var(--red);
     text-align: center;
     padding: 10px 0;
@@ -149,13 +149,13 @@ section.header img {
     width: 50%;
 }
 
-section h1 {
+section h2 {
     color: var(--white);
     font-size: 1.5em;
     text-align: center;
 }
 
-section#genitori h2 {
+section#genitori h3 {
     color: var(--black);
     font-size: 1.5em;
 }
@@ -394,11 +394,11 @@ footer p {
         background-color: var(--white);
     }
 
-    h1 {
+    h2 {
         font-size: 1.5em;
     }
 
-    h2 {
+    h3 {
         font-size: 1.2em;
     }
 
@@ -465,7 +465,7 @@ footer p {
 }
 
 @media (max-width: 480px) {
-    header {
+    h1 {
         font-size: 1.5em;
     }
 
@@ -489,7 +489,7 @@ footer p {
 /* change color based on OS dark mode */
 @media (prefers-color-scheme: dark) {
     html,
-    header,
+    h1,
     div.navbar,
     div.hamburger,
     nav.active,
